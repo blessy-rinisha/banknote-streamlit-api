@@ -12,6 +12,7 @@ class BankNote(BaseModel):
 def predict_banknote(data: BankNote):
     response = requests.post("http://127.0.0.1:8000/predict", json=data.dict())
     result= response.json()
+    
 
     prediction_value = result["prediction"]
 
